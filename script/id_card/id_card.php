@@ -259,7 +259,7 @@ public function id_card_css(){
 .card_box{
 	overflow: hidden;
 	background: #eeeeee;
-	height: 260px;
+	height: 280px;
 	width: 374px;
 	border-radius: 0px;
 	border-style: solid;
