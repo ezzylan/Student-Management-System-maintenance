@@ -8,7 +8,7 @@
 <div class="containerr" style="">
 	<div class="row" style="">
 		        <div id="inbox" >
-          <div style="position: fixed;" class="fab btn-group show-on-hover dropup">
+          <div style="position: fixed; z-index: 9999;" class="fab btn-group show-on-hover dropup">
           <div data-toggle="tooltip" data-placement="left" title="Select Option" style="margin-left: 42px;">
           <button type="button" class="btn btn-danger btn-io dropdown-toggle" data-toggle="dropdown"  style="">
             <span class="fa-stack fa-2x">
