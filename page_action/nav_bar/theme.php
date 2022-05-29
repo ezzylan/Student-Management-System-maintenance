@@ -9,7 +9,7 @@ $login_user_theme=$login_user['theme'];
 ?>
 
 
-<div class="row">
+<div class="theme_container">
 	<?php foreach ($theme_list as $key => $value) { 
 		$name=$value['name'];
 		$theme_id=$value['id'];
@@ -19,37 +19,70 @@ $login_user_theme=$login_user['theme'];
 		$active_class=($login_user_theme==$theme_id)?"theme_class_active":"hover_cls";
 
 	?>
-
-		<div class="col-md-3">
+		<div class="theme_item">
 			<div onclick="change_theme(<?php echo "$theme_id"; ?>)" style="<?php echo $style; ?>" class="theme_cls <?php echo $active_class; ?>">
 				<?php if($login_user_theme==$theme_id){ ?>
-					<span style="font-size: 40px" class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+					<span style="font-size: 30px" class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
 				<br/>
 				<?php } ?>
-				<?php echo "$name"; ?>
-			</div>
-		</div>
 
+			</div>
+			<div class="theme_name_text"><?php echo "$name"; ?></div>
+		</div>
 	<?php } ?>
+		<a href="theme.php">
+		<div class="theme_item">
+			<div style="background: #e8e8e8;box-shadow: none;" class="theme_cls">
+				...
+			</div>
+			<div class="theme_name_text">Edit Theme</div>
+		</div>
+		</a>
 </div>
 
 <style type="text/css">
+	.theme_container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+		align-content: center;
+		gap: 15px;
+	}
+	.theme_item{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100px;
+	}
+	.theme_name_text{
+		max-width: 100px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		display: block;
+		overflow:hidden;
+		cursor: default;
+		font-size: 12px;
+	}
+
 	.theme_cls{
-		border: 1px solid #E8E8E8;
 		padding: 15px;
-		height: 90px;
-		font-size: 20px;
-		margin-bottom: 5px;
+		height: 50px;
+		width: 50px;
+		margin-bottom: 15px;
 		cursor: pointer;
-		text-align: center;
-		font-weight: bold;
-		border-radius: 10px;
+		border-radius: 50%;
+		border: 2px solid rgba(232, 232, 232, 0.5);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.hover_cls:hover{
 		font-size: 21px;
 	}
 	.theme_class_active{
-		
+		border: 2px solid #0a84ff;
 	}
 </style>
 
