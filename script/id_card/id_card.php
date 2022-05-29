@@ -352,7 +352,7 @@ public function id_card_css(){
 }
 
 .id_box_body{
-    height: 143px;
+    height: 160px;
     margin-bottom: 5px;
     overflow: hidden;
     
