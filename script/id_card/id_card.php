@@ -105,6 +105,9 @@ foreach ($data as $key => $info) {
 
   $margin_right=($c%2==1)?"margin_id_card":"";
 
+  $gender=$this->student[$student_id]['gender'];
+  $religion=$this->student[$student_id]['religion'];
+
  ?>
 
 
@@ -142,12 +145,12 @@ foreach ($data as $key => $info) {
 	      </div> 
 
 	      <div class="name_field">    
-	      	<span class="id_field">Father Name :</span>
-	      	<span class="inf"><?php echo "$father_name"; ?></span>
+	      	<span class="id_field">Gender</span>
+	      	<span class="inf"><?php echo "$gender"; ?></span>
 	      </div>
 	      <div class="name_field">    
-	      	<span class="id_field">Mother Name :</span>
-	      	<span class="inf"><?php echo "$mother_name"; ?></span>
+	      	<span class="id_field">Religion</span>
+	      	<span class="inf"><?php echo "$religion"; ?></span>
 	      </div>
 
 	      <div class="name_field">    
@@ -256,7 +259,7 @@ public function id_card_css(){
 .card_box{
 	overflow: hidden;
 	background: #eeeeee;
-	height: 260px;
+	height: 280px;
 	width: 374px;
 	border-radius: 0px;
 	border-style: solid;
@@ -349,7 +352,7 @@ public function id_card_css(){
 }
 
 .id_box_body{
-    height: 143px;
+    height: 160px;
     margin-bottom: 5px;
     overflow: hidden;
     
