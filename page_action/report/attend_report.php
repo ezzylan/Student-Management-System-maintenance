@@ -46,8 +46,16 @@ if(isset($_POST['attend_report'])){
 <?php
 	if (empty($info_index)) {
 		?>
-		<div>
-			Error: No record found!
+		<style type="text/css">
+			.error-tab {
+				background-color: red;
+				color: white;
+				padding: 20px;
+				text-align: center;
+			}
+		</style>
+		<div class="error-tab">
+			<b>Error: No record found!</b>
 		</div>
 		<?php
 	} else {

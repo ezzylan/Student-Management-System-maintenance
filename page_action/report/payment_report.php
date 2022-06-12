@@ -30,8 +30,16 @@ $info=$report->get_payment_report_list($data);
 <?php
 	if (empty($info)) {
 		?>
-		<div>
-			Error: No record found!
+		<style type="text/css">
+			.error-tab {
+				background-color: red;
+				color: white;
+				padding: 20px;
+				text-align: center;
+			}
+		</style>
+		<div class="error-tab">
+			<b>Error: No record found!</b>
 		</div>
 		<?php
 	} else {
@@ -44,7 +52,7 @@ $info=$report->get_payment_report_list($data);
 			table {
 		  border-collapse: collapse;
 		}
-			.payment_report{
+		.payment_report{
 				background-color: #ffffff;
 				padding: 15px;
 				border-radius: 4px;

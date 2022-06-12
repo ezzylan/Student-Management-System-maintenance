@@ -18,8 +18,16 @@ $date2=date("d M Y", strtotime($date2));
 <?php
 	if ($info['total_expence'] == 0 && $info['total_payment'] == 0 && $info['total_income'] == 0 && $info['total_profit'] == 0) {
 		?>
-		<div>
-			Error: No record found!
+		<style type="text/css">
+			.error-tab {
+				background-color: red;
+				color: white;
+				padding: 20px;
+				text-align: center;
+			}
+		</style>
+		<div class="error-tab">
+			<b>Error: No record found!</b>
 		</div>
 		<?php
 	} else {
