@@ -42,6 +42,16 @@ if(isset($_POST['attend_report'])){
   if(isset($batch[$batch_id]['name']))$batch_name=$batch[$batch_id]['name'];
 
 	?>
+
+<?php
+	if (empty($info_index)) {
+		?>
+		<div>
+			Error: No record found!
+		</div>
+		<?php
+	} else {
+		?>
 <div class="pull-right">
 <button class="button" onclick="print('attend_area')">Print Report</button>
 </div>
@@ -191,3 +201,6 @@ if(isset($_POST['attend_report'])){
 
 
 </div>
+		<?php
+	}
+?>

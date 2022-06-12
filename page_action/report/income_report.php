@@ -16,7 +16,16 @@ $date2=date("d M Y", strtotime($date2));
 
 ?>
 
-<div class="pull-right">
+<?php
+	if (empty($info)) {
+		?>
+		<div>
+			Error: No record found!
+		</div>
+		<?php
+	} else {
+		?>
+		<div class="pull-right">
 <button class="button" onclick="print('report_body')">Print Report</button>
 </div>
 <div id="report_body">
@@ -152,3 +161,7 @@ $date2=date("d M Y", strtotime($date2));
 
 
 ?>
+		<?php
+	}
+?>
+
