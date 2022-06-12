@@ -302,19 +302,19 @@ CREATE TABLE `setting` (
 -- --------------------------------------------------------
 
 
---  
--- Dumping data for table `setting` 
---  
+--
+-- Dumping data for table `setting`
+--
 
-INSERT INTO `setting` (`id`, `option_name`, `option_value`) VALUES  
-(1, 'site_name', 'Open Source Student Management System'),  
-(2, 'sort_name', 'EMS'), 
-(3, 'address', 'Dhaka, Bangladesh'), 
-(4, 'main_logo', 'techserm_full_logo.jpg'),  
-(5, 'logo', 'techserm_small_logo.png'),  
-(6, 'phone', '-'),  
-(7, 'email', 'sk.amirhamza@gmail.com'),  
-(8, 'msg', 'EMS');  
+INSERT INTO `setting` (`id`, `option_name`, `option_value`) VALUES
+(1, 'site_name', 'Open Source Student Management System'),
+(2, 'sort_name', 'EMS'),
+(3, 'address', 'Dhaka, Bangladesh'),
+(4, 'main_logo', 'techserm_full_logo.jpg'),
+(5, 'logo', 'techserm_small_logo.png'),
+(6, 'phone', '-'),
+(7, 'email', 'sk.amirhamza@gmail.com'),
+(8, 'msg', 'EMS');
 
 -- --------------------------------------------------------
 
@@ -412,6 +412,7 @@ CREATE TABLE `student` (
   `father_name` text NOT NULL,
   `mother_name` text NOT NULL,
   `email` text,
+  `ic_num` int(12) NOT NULL,
   `photo` text NOT NULL,
   `personal_mobile` text,
   `father_mobile` text,
@@ -421,11 +422,10 @@ CREATE TABLE `student` (
   `birth_day` date DEFAULT NULL,
   `gender` text,
   `religion` text,
+  `race` text,
   `school` text,
-  `ssc_rool` int(11) DEFAULT NULL,
-  `ssc_reg` int(11) DEFAULT NULL,
-  `ssc_board` text,
-  `ssc_result` double DEFAULT NULL,
+  `student_id` int(8) DEFAULT NULL,
+  `class` text,
   `date` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 

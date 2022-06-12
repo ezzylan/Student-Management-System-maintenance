@@ -10,14 +10,14 @@ class student extends student_edit
   public $db;
   public $program_ob;
   public $student_list;
-	
+
 	 public function __construct(){
-     
+
      $this->db=new database();
      $this->conn=$this->db->conn;
      $this->program_ob=new program();
      $this->student_list=$this->get_student_info1();
-     
+
  }
 
  public function select($query){
@@ -56,16 +56,15 @@ public function valid_mobile_number($val){
       $sub["birth_day"]=$row['birth_day'];
       $sub["gender"]=$row['gender'];
       $sub["religion"]=$row['religion'];
+      $sub["race"]=$row['race'];
       $sub["address"]=$row['address'];
       $sub['photo']=$url.$row['photo'];
-      
+
       $sub["school"]=$row['school'];
-      $sub["ssc_rool"]=$this->valid_number($row['ssc_rool']);
-      $sub["ssc_reg"]=$this->valid_number($row['ssc_reg']);
-      $sub["ssc_board"]=$row['ssc_board'];
-      $sub["ssc_result"]=$this->valid_number($row['ssc_result']);
+      $sub["student_id"]=$this->valid_number($row['student_id']);
+      $sub["class"]=$row['class'];
       $sub['program_list']=$this->get_separate_program_list($id);
-      
+
       $sub["date"]=$row['date'];
 
       $info[$id]=$sub;
@@ -80,21 +79,21 @@ public function get_info($student_id){
   $info=$info[0];
   $url="upload/student_photo/";
   $info['photo']=$url.$info['photo'];
-  
+
   return $info;
 }
 
 public function get_admit_program_info($admit_id){
   $sql="
-  select 
+  select
   admit_program.*,student.name as student_name,
   program.name as program_name, batch.name as batch_name,
   user.uname as admit_by
   from admit_program
-  INNER JOIN program ON program.id=admit_program.program_id 
-  INNER JOIN student ON student.id=admit_program.student_id 
-  INNER JOIN user ON user.id=admit_program.admit_by 
-  INNER JOIN batch ON batch.id=admit_program.batch_id 
+  INNER JOIN program ON program.id=admit_program.program_id
+  INNER JOIN student ON student.id=admit_program.student_id
+  INNER JOIN user ON user.id=admit_program.admit_by
+  INNER JOIN batch ON batch.id=admit_program.batch_id
   WHERE admit_program.id=$admit_id
   ";
   $info=$this->db->get_sql_array($sql);
@@ -103,7 +102,7 @@ public function get_admit_program_info($admit_id){
 
 
 public function stuednt_admission_sms($admit_id){
-  
+
   $info=$this->get_admit_program_info($admit_id);
 
   $sms="Dear student_name,\nCongratulation for admit our program_name.\nYour ID: 10007\nBatch: Protassa\nBatch Time: Mon,Wed,Fry(10-11)\n\nBest Wish.
@@ -207,13 +206,13 @@ public function cheikh_student($program_id,$student_id){
 }
 
 public function select_pending_program_by_student($student_id){
-  $sql="select DISTINCT(program_id) from admit_program where student_id=$student_id"; 
+  $sql="select DISTINCT(program_id) from admit_program where student_id=$student_id";
   $info=$this->db->get_sql_array($sql);
   $admit_program=array();
   foreach ($info as $key => $value){
     array_push($admit_program, $value);
   }
- 
+
   $people = array(3,20,2);
   $criminals = array( 2, 4, 8, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
   $fastfind = array_diff($people,$criminals);
@@ -225,7 +224,7 @@ public function select_pending_program_by_student($student_id){
 
 public function select_program_by_student($s_id){
    $info=$this->program_ob->get_program_info();
-   
+
    foreach ($info as $key => $value) {
       $id=(int)$value['id'];
       $student_id1=(int)$s_id;
@@ -252,7 +251,7 @@ public function select_program_by_student($s_id){
     rsort($arr);
     return $arr[0]+1;
    }
-   
+
   }
 
   public function cheikh_student_program($student_id,$program_id){
