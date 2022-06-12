@@ -15,6 +15,15 @@ $date2=date("d M Y", strtotime($date2));
 
 ?>
 
+<?php
+	if ($info['total_expence'] == 0 && $info['total_payment'] == 0 && $info['total_income'] == 0 && $info['total_profit'] == 0) {
+		?>
+		<div>
+			Error: No record found!
+		</div>
+		<?php
+	} else {
+		?>
 <div class="pull-right">
 <button class="button" onclick="print('report_body')">Print Report</button>
 </div>
@@ -134,4 +143,7 @@ $date2=date("d M Y", strtotime($date2));
 
 
 
+?>
+		<?php
+	}
 ?>
