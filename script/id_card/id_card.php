@@ -107,6 +107,10 @@ foreach ($data as $key => $info) {
 
   $gender=$this->student[$student_id]['gender'];
   $religion=$this->student[$student_id]['religion'];
+  $phone=$student_info1['personal_mobile'];
+  $phone=$this->make_string($phone,34);
+
+
 
  ?>
 
@@ -259,8 +263,8 @@ public function id_card_css(){
 .card_box{
 	overflow: hidden;
 	background: #eeeeee;
-	height: 280px;
-	width: 374px;
+	height: 310px;
+	width: 390px;
 	border-radius: 0px;
 	border-style: solid;
 	border-color: #2E363F;
@@ -273,10 +277,10 @@ public function id_card_css(){
     page-break-inside: avoid; 
 }
 .card_header{
-	background-color: #2E363F;
+	background-color: #0ABAA4;
 	padding: 5px;
 	color: #EEEEEE;
-	height: 60px;
+	height: 100px;
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     overflow: hidden;
 	font-size: 13px;
