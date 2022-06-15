@@ -26,7 +26,7 @@ $date=date("Y-m-d",strtotime($db->date()));
               <input type="date" id="attend_date" value="<?php echo "$date"; ?>" class="input_date" name="">
           </div> 
           <div class="col-md-3">
-            <button class="btn_select" onclick="attend_panel()">Attendence Panel</button>
+            <button class="btn_select" onclick="attend_panel()">Attendance Panel</button>
           </div>
     </div> 
 </div>

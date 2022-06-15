@@ -31,14 +31,14 @@
                                 <li>Add Student Information</li>
                                 <li>Admit Student In Multiple Program</li>
                                 <li>Student Payment System</li>
-                                <li>Student Attendence System</li>
+                                <li>Student Attendance System</li>
                                 <li>Generate Student Id Card</li>
                                 <li>Program Add</li>
                                 <li>Exam Add</li>
                                 <li>Add Exam Result Add and generate Auto Ranking</li>
                                 <li>Sending Result by SMS</li>
                                 <li>Sending Notice By SMS</li>
-                                <li>Institute Report (Payment,Expence,Income,Profit,Attendence)</li>
+                                <li>Institute Report (Payment,Expence,Income,Profit,Attendance)</li>
                             </ul>
                         </div>
                         

@@ -55,7 +55,7 @@ if(isset($_POST['take_attend'])){
 
 <font class="report_title">
 		<center>
-			Daily Attendence <br/>
+			Daily Attendance <br/>
 		</center>
 		</font>
 		<center>
@@ -101,7 +101,7 @@ if(isset($_POST['take_attend'])){
 </table>
 <div style="margin-top: 10px"></div>
 
-<center><button class="btn_attend" onclick='save_attend(<?php echo $data; ?>)'>Save Attendence</button></center>
+<center><button class="btn_attend" onclick='save_attend(<?php echo $data; ?>)'>Save Attendance</button></center>
 </div>
 </div> 
 
@@ -184,7 +184,7 @@ if(isset($_POST['attend_report'])){
 
 		<font class="report_title">
 			<center>
-				Daily Attendence Report<br/>
+				Daily Attendance Report<br/>
 			</center>
 		</font>
 		<center>
@@ -235,7 +235,7 @@ if(isset($_POST['attend_sms'])){
 	<div class="col-md-2"></div>
 	<div class="col-md-4">
 		<select class='form-control' id='attend_type'>
-        	<option value='-1'> --Select Attendence Type-- </option>
+        	<option value='-1'> --Select Attendance Type-- </option>
        		<option value='2'> Absent And Present All Student</option>
         	<option value='0'> Absent Student</option>
         	<option value='1'> Present Student</option>
@@ -251,7 +251,7 @@ if(isset($_POST['attend_sms'])){
 	</div>
 	<div class="col-md-2"></div>
 	<div class="col-md-4"></div>
-	<div class="col-md-3"><button class="btn_select" onclick="send_attend_sms()">Send Attendence SMS</button></div>
+	<div class="col-md-3"><button class="btn_select" onclick="send_attend_sms()">Send Attendance SMS</button></div>
 </div>
 
 <?php
@@ -305,9 +305,9 @@ if(isset($_POST['attend_panel'])){
         <div class="panel with-nav-tabs panel-primary animated slideInDown">
             <div class="header_box">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#tab1primary" data-toggle="tab" onclick="take_attend()">Take Attendence</a></li>
-                    <li onclick="attend_report()"><a href="#tab2primary" data-toggle="tab">Attendence Report</a></li>
-                    <li onclick="attend_sms()"><a href="#tab3primary" data-toggle="tab">Send Attendence SMS</a></li>
+                    <li class="active"><a href="#tab1primary" data-toggle="tab" onclick="take_attend()">Take Attendance</a></li>
+                    <li onclick="attend_report()"><a href="#tab2primary" data-toggle="tab">Attendance Report</a></li>
+                    <li onclick="attend_sms()"><a href="#tab3primary" data-toggle="tab">Send Attendance SMS</a></li>
                 </ul>
             </div>
   	<div class="box_body">

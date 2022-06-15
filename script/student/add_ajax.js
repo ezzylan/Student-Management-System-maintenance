@@ -64,7 +64,7 @@ function attend(){
         success: function(response) {
             //alert("Yay!");
             document.getElementById("id").value="";
-            document.getElementById("load").innerHTML="Save Attendence";
+            document.getElementById("load").innerHTML="Save Attendance";
             document.getElementById("msg").innerHTML =response;
             
             
