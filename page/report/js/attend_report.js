@@ -49,7 +49,7 @@ function attend_report(){
    var data = {
         "attend_report": data1
     }
-    //modal_open(modal, "Attendence Report");
+    //modal_open(modal, "Attendance Report");
     loader("report_area");
     get_ajax(get_action_data("report_area"), data);
 }

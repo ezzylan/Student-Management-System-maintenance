@@ -106,7 +106,7 @@ function send_attend_sms(){
   receiver=get_value("select_receiver");
   error="";
   if(type==-1){
-     error="Please Select Attendence Type";
+     error="Please Select Attendance Type";
   }
   else if(receiver==-1){
         error="Please Select Receiver";
@@ -199,7 +199,7 @@ function save_attend(info){
         url: url,
         data:data,
         success: function(response) {
-        	success("Successfully Taken Student Attendence");
+        	success("Successfully Taken Student Attendance");
           take_attend();
         }
     });

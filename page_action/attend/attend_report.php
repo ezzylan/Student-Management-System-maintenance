@@ -30,7 +30,7 @@ if(isset($_POST['attend_report'])){
 	<div class="col-md-12">
 		<font class="report_title">
 			<center>
-				Monthly Attendence Report<br/>
+				Monthly Attendance Report<br/>
 			</center>
 		</font>
 		<center>
