@@ -43,11 +43,22 @@ function view_payment() {
     program_id = get_value("select_payment_program");
     type = get_value("select_payment_type");
     error = "";
-    if (program_id == -1) error = "Select Program";
-    else if (type == -1) error = "Select Payment Type";
+    if (program_id == -1) error = "Please select a program.";
+    else if (type == -1) error = "Please select a payment type.";
+
+    var parent_div = document.querySelector(".text-center")
+    var error_tab = document.createElement("div")
+    error_tab.style.backgroundColor = "red";
+    error_tab.style.color = "white";
+    error_tab.style.padding = "20px";
+    error_tab.style.margin = "20px";
+    error_tab.style.textAlign = "center";
+    error_tab.innerText = error
 
     if (error != "") {
-        alert(error);
+        // alert(error);
+        parent_div.removeChild(parent_div.getElementsByTagName('div')[0])
+        parent_div .prepend(error_tab)
         return;
     }
 
